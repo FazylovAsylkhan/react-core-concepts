@@ -1,23 +1,36 @@
-# react-core-concepts
+# Home task (Task 2)
 
-## Create components
+## Description
 
-### Switch to a new branch. Create several components using:  
+- Create package.json file and install react.
 
-- React.createElement
-- React.Component
-- React.PureComponent
-- Functional component
+- Install and configure webpack & babel to get build artifact by running npm command.
+- Set DEV and PROD build configuration. Use env variables, dev server, optimizations for PROD build.
 
-## To understand more how components work it's recommended to create a couple of interactive components, for example:
+- Don’t use any React boilerplate (like create-react-app) for this task.
 
-- A counter, which renders a numeric value and two buttons to increment or decrement the value.
-- A search form as per the design guide, which renders a search input and a button to initiate a new search action.
-- A genre toggle as per the design guide.
+### Configure Linter
 
-## Evaluation criteria* 
+- Install linter to check JS files
+- Choose one of the public presets (configs) with rules
+- Fix all issues
+- Install Husky + Lint-staged to run linters on pre-commit hook
 
-- 2 - Install blank create-react-app application; 
-- 3 - Render blank message (Hello World) with React; 
-- 4 - Use at least 2 methods of creating react components; 
-- 5 - Use all methods which mentioned in task, to create React components, install and use all extensions. 
+## Configure TypeScript (optional)
+
+Today most of the projects use TypeScript as a main language.
+We highly encourage you to configure TypeScript for the project:
+
+Install TypeScript package
+Configure transpiling
+Change your previous code (if you have any) to the new syntax
+You can skip this step if you wish to use plain JavaScript instead.
+But keep in mind that by skipping TypeScript you will miss important part of experience.
+Discuss this with your mentor.
+
+### Evaluation criteria\*
+
+- 2 - Installed React
+- 3 - Configured Webpack
+- 4 - Configured Babel/TypeScript with JSX. Configured linter.
+- 5 - Have DEV and PROD build commands (use env variables)
