@@ -1,22 +1,30 @@
 import React from 'react';
 import classes from './Input.module.scss';
 
-interface InputProps {
-  type: string;
+interface InputProps extends React.HTMLAttributes<HTMLInputElement> {
+  value: string;
 }
 
-function Input(
-  props: JSX.IntrinsicAttributes &
-    React.ClassAttributes<HTMLInputElement> &
-    React.InputHTMLAttributes<HTMLInputElement> &
-    InputProps
-): JSX.Element {
-  const { type } = props;
+function Input({
+  className,
+  onChange,
+  value,
+  placeholder,
+  id,
+}: InputProps): JSX.Element {
   const { search } = classes;
 
-  const inputClass = type === 'search' ? search : '';
+  const inputClass = className === 'search' ? search : '';
 
-  return <input className={inputClass} {...props} />;
+  return (
+    <input
+      className={inputClass}
+      onChange={onChange}
+      value={value}
+      placeholder={placeholder}
+      id={id}
+    />
+  );
 }
 
 export default Input;

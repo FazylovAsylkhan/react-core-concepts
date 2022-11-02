@@ -1,16 +1,20 @@
 import React from 'react';
 import classes from './Button.module.scss';
 
-function Button(
-  props: JSX.IntrinsicAttributes &
-    React.ClassAttributes<HTMLButtonElement> &
-    React.ButtonHTMLAttributes<HTMLButtonElement>
-): JSX.Element {
-  const { children } = props;
+interface ButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
+  type: 'submit' | 'reset' | 'button';
+}
+
+function Button({
+  children,
+  onClick,
+  type = 'button',
+}: ButtonProps): JSX.Element {
   const { primary } = classes;
 
   return (
-    <button type="button" className={primary} {...props}>
+    // eslint-disable-next-line react/button-has-type
+    <button type={type} className={primary} onClick={onClick}>
       {children}
     </button>
   );

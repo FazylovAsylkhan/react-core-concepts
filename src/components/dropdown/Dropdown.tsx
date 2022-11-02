@@ -1,8 +1,8 @@
 import React from 'react';
 import DropdownItem from './dropdownItem';
 import { joinClasses } from '../../helpers';
-import classes from './Dropdown.module.scss';
 import type { IDropdownItem } from './models';
+import classes from './Dropdown.module.scss';
 
 interface DropdownState {
   isActive: boolean;

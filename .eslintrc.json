@@ -38,7 +38,6 @@
   },
   "plugins": ["react", "promise", "import"],
   "rules": {
-    "react/jsx-props-no-spreading": "off",
     "no-unexpected-multiline": "error"
   },
   "ignorePatterns": ["build"]

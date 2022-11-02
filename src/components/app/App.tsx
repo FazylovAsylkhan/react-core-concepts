@@ -1,9 +1,9 @@
 import React from 'react';
-import classes from './App.module.scss';
-import '../../scss/style.module.scss';
 import Counter from '../counter';
 import Search from '../search';
 import Dropdown from '../dropdown';
+import classes from './App.module.scss';
+import '../../scss/style.module.scss';
 
 function App(): JSX.Element {
   const { app } = classes;

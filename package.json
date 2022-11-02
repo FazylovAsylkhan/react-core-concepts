@@ -7,7 +7,7 @@
     "start": "webpack serve",
     "build-dev": "webpack",
     "build": "webpack --node-env=production",
-    "watch": "webpack --watch --node-env=development",
+    "watch": "webpack --watch",
     "stats": "webpack --profile --json > stats.json",
     "stylelint-check": "stylelint-config-prettier-check",
     "formate": "prettier --write src/**/*.*",
@@ -39,7 +39,6 @@
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-promise": "^6.1.1",
     "eslint-plugin-react": "^7.31.10",
-    "eslint-webpack-plugin": "^3.2.0",
     "html-webpack-plugin": "^5.5.0",
     "husky": "^8.0.1",
     "lint-staged": "^13.0.3",
@@ -64,7 +63,7 @@
     "react-dom": "^18.2.0"
   },
   "lint-staged": {
-    "*.js": "eslint --cache --fix",
-    "*.{js,css,md}": "prettier --write"
+    "*.{js,ts,tsx}": "eslint --cache --fix",
+    "*.{js,ts,tsx,css,md}": "prettier --write"
   }
 }

@@ -32,8 +32,12 @@ class Counter extends React.Component<Record<string, never>, CounterState> {
       <div className={counter}>
         <Title>Count {count}</Title>
         <div className={controller}>
-          <Button onClick={() => this.increment()}>Increment</Button>
-          <Button onClick={() => this.decrement()}>Decrement</Button>
+          <Button type="button" onClick={() => this.increment()}>
+            Increment
+          </Button>
+          <Button type="button" onClick={() => this.decrement()}>
+            Decrement
+          </Button>
         </div>
       </div>
     );

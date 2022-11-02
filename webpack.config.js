@@ -122,6 +122,7 @@ module.exports = () => {
       port: 3000,
       compress: true,
     };
+
     config.plugins.push(new BundleAnalyzerPlugin());
   }
 

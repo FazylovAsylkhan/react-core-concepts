@@ -6,6 +6,14 @@ function Search(): JSX.Element {
   const [value, setValue] = useState('');
   const { search, controller } = classes;
 
+  const handleClick = (e: React.MouseEvent): void => {
+    e.preventDefault();
+  };
+
+  const changeHanle = (e: React.ChangeEvent<HTMLInputElement>): void => {
+    setValue(e.target.value);
+  };
+
   return (
     <form className={search}>
       <Title>Find your movie</Title>
@@ -13,11 +21,13 @@ function Search(): JSX.Element {
         <Input
           value={value}
           id="search"
-          type="search"
+          className="search"
           placeholder="What do you want to watch?"
-          onChange={(event) => setValue(event.target.value)}
+          onChange={changeHanle}
         />
-        <Button>search</Button>
+        <Button type="submit" onClick={handleClick}>
+          search
+        </Button>
       </div>
     </form>
   );
